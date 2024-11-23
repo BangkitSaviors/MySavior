@@ -1,2 +1,2 @@
 # MySavior
-MySavior adalah platform inovatif yang dirancang khusus untuk memberikan bantuan dan dukungan kepada lansia dalam situasi darurat.
+MySavior adalah platform inovatif yang dirancang khusus untuk memberikan bantuan dan dukungan kepada lansia dalam situasi darurat. Dikembangkan oleh tim berbakat dari Bangkit Academy, platform ini bertujuan untuk memberdayakan pengguna lansia dengan solusi teknologi yang mudah digunakan, memastikan keselamatan mereka di mana saja dan kapan saja. Proyek Menggunakan teknologi terkini seperti cloud computing, machine learning, dan mobile development untuk menciptakan solusi inovatif yang mendukung keselamatan masyarakat.
