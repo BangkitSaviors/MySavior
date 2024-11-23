@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MySavior: A Lifeline for the Elderly</title>
+    <link rel="icon" href="website/img/logo.png" type="image/icon type">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="website/css/bulma.min.css">
+    <link rel="stylesheet" href="website/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="website/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="website/css/fontawesome.all.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./website/javascript/bulma-carousel.min.js"></script>
+    <script src="./website/javascript/bulma-slider.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator_bootstrap4.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script>
+    <script defer src="website/javascript/fontawesome.all.min.js"></script>
+    <!-- <script src="website/javascript/peity-vanilla.js"></script> -->
+
+
+    <!-- below we load some js scripts -->
+    <script src="website/javascript/benchmark_table.js" type="module"></script>
+
+    <link rel="stylesheet" href="website/css/index.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C7GJ4FYMY9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-C7GJ4FYMY9');
+    </script>
+
+    <!-- MathJax script -->
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/javascript">
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+    </script>
+
+    <noscript>
+        <p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101339888ns.gif" /></p>
+    </noscript>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        var toggles = document.querySelectorAll('.toggle-section');
+        toggles.forEach(function(toggle) {
+            toggle.addEventListener('click', function() {
+            var content = document.getElementById(toggle.getAttribute('aria-controls'));
+            var toggleIcon = toggle.children[1].children[0];
+            content.classList.toggle('is-active');
+            if (content.classList.contains('is-active')) {
+                toggleIcon.style.transition = 'transform 0.3s ease';
+                toggleIcon.style.transform = 'rotate(180deg)';
+            } else {
+                toggleIcon.style.transition = 'transform 0.3s ease';
+                toggleIcon.style.transform = 'rotate(0deg)';
+            }
+            });
+        });
+        });
+      </script>
+
+    <style>
+        .collapse-content {
+          display: none;
+          margin-top: 10px;
+        }
+        .collapse-content.is-active {
+          display: block;
+        }
+        /* .toggle-section .icon.is-small {
+          transition: transform 0.3s ease;
+        } */
+        /* .toggle-section .fa-angle-up {
+          transform: rotate(180deg);
+        } */
+      </style>
+</head>
+
+<body>
+
+    
+    
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title is-bold">
+                            <img src="website/img/logo.png" alt="logo" style="height: 1.0em; margin-bottom: 15px;"/>
+                            MySavior: A Lifeline for the Elderly
+                        </h1>
+                        <!-- <p style="color: darkred; font-weight: bold;">!</p> -->
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                              <a href="https://github.com/WildanBusiness" target="_blank">Moh Wildan Haikhal</a><sup>1</sup>,</span>
+                            <span class="author-block">
+                                <a href="" target="_blank">Azizah Rahmawati</a><sup>2   </sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://github.com/MuliaMB" target="_blank">Yoga Mulia Abubakar</a><sup>1</sup>,
+                            </span>
+                            <span class="author-block">
+                              <a href="" target="_blank">Muhammad Husaini Hasyim</a><sup>1</sup>,
+                            </span>
+                            <span class="author-block">
+                              <a href="" target="_blank">Rafika Ayu</a><sup>1</sup>
+                            </span>
+                            <span class="author-block">
+                              <a href="" target="_blank">Ayu Friska Purba</a><sup>3</sup>
+                            </span>
+                            <span class="author-block">
+                              <a href="" target="_blank">Risky Firdaus</a><sup>1</sup>
+                            </span>
+                          </div>
+            
+                
+                          
+                
+                          <div class="is-size-5 publication-authors">
+                            <span class="author-block"><sup>1</sup>Politeknik Negeri Sriwijaya</span>
+                            <span class="author-block"><sup>2</sup>Universitas Telkom</span>
+                            <span class="author-block"><sup>3</sup>Universitas Jambi</span>
+                          </div>
+                          <div class="'is-size-5 publication-authors">
+                            <span class="author-block"><sup>†</sup></span>
+                          </div>
+                          <div class="'is-size-4 publication-authors">
+                            <span class="author-block" style="color: darkred; font-weight: bold;">BANGKIT Academy 2024</span>
+                          </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- PDF Link. -->
+                                 <!-- <span class="link-block">
+                                    <a class="btn btn-outline-dark"
+                                     role="button">
+                                    &nbsp;
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>&nbsp;&nbsp;Paper (Coming Soon)</span>
+                                    </a> &nbsp;&nbsp;
+                                 </span> -->
+                                <!-- Paper Link. -->
+                                <!-- <span class="link-block">
+                                    <a href="" class="btn btn-outline-dark"
+                                        role="button">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a> &nbsp;&nbsp;
+                                </span> -->
+                                <!-- Code Link. -->
+                                <span class="link-block">
+                                    <a href="https://github.com/BangkitSaviors/MySavior" target="_blank" class="btn btn-outline-dark" role="button">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a> &nbsp;&nbsp;
+                                </span>
+                                <!-- Raw Result Link. -->
+                                <!-- <span class="link-block">
+                                    <a href="" class="btn btn-outline-dark" role="button">
+                                        <span class="icon">
+                                            <i class="fab fa-google-drive"></i>
+                                        </span>
+                                        <span>Raw Results</span>
+                                    </a> &nbsp;&nbsp;
+                                </span> -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- video element  -->
+    <section class="hero teaser">
+      <div class="container is-max-desktop has-text-centered">
+        <div class="hero-body">
+            <video id="teaser" autoplay muted loop playsinline controls width="100%">
+                <source src="./website/videos/demo.mp4" type="video/mp4">
+            </video>
+            <figcaption  style="font-style: italic; text-align: center;">
+                CUMAN VIDEO TEST, directed by WildanJR.
+            </figcaption>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="abstract">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-2">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            <strong>MySavior</strong> is a capstone project developed by a talented team from 
+                            <strong>Bangkit Academy</strong> to provide essential support and assistance for the elderly, 
+                            particularly in emergencies. By leveraging advanced technologies, the platform ensures user safety, 
+                            promotes health management, and strengthens the connection between elderly users and their guardians 
+                            or caregivers.
+                        </p>
+                        <p>Key features include:</p>
+                        <ol>
+                            <li>
+                                <strong>Shake Detection:</strong> An innovative feature that detects smartphone vibrations or shakes, 
+                                automatically sending emergency alerts to designated contacts or caregivers.
+                            </li>
+                            <li>
+                                <strong>Health Monitoring Tools:</strong>
+                                <ul>
+                                    <li><strong>Manual BMI Calculation:</strong> Allows users to compute and monitor their Body Mass Index (BMI) for health optimization.</li>
+                                    <li><strong>Blood Sugar Tracking:</strong> Enables users to manually input and track blood sugar levels for better health management.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Live Location Sharing:</strong> Provides real-time location updates to guardians, ensuring swift assistance and reassurance during emergencies.
+                            </li>
+                            <li>
+                                <strong>Image Recognition for Food Analysis:</strong> Utilizes AI-powered image recognition to evaluate and classify food as healthy or unhealthy, promoting better dietary choices for elderly users.
+                            </li>
+                        </ol>
+                        <p>
+                            This project harnesses <strong>cloud computing</strong>, <strong>machine learning</strong>, and 
+                            <strong>mobile development</strong> to create an intuitive and impactful platform. 
+                            <strong>MySavior</strong> represents the team’s commitment to improving the quality of life and safety 
+                            for elderly users, making it a vital tool in promoting health and well-being in the aging population.
+                        </p>
+                    </div>
+                    <figure>
+                        <img src="website/img/teaser.png" alt="Embodied agent interface overview." class="EAgent_overview_image" />
+                        <figcaption style="font-style: italic;">
+                            INI GAMBAR CUMAN BUAT NGETEST 
+                            <!-- <b>Screenshot 1:</b> The overview of our MySavior Application. -->
+                        </figcaption> 
+                    </figure>
+                </div>
+            </div>
+            <!--/ Abstract. -->
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="section" id="abstract">
+        <div class="container is-max-desktop">
+            <!-- Result. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-2">Demo</h2>
+                    <figure>
+                        <img src="website/img/food_analysis.jpg" alt="food analysis overview." class="food_analysis"/>
+                        <figcaption  style="font-style: italic;">
+                            <b>Feature 1:</b> This overview of Food Analysis.
+                        </figcaption>
+                    </figure>
+                    <br>
+                    <figure>
+                        <img src="website/img/cnn_architecture.jpg" alt="CNN Architecture." class="cnn_architecture"/>
+                        <figcaption  style="font-style: italic;">
+                            <b>Architecture Model:</b> This CNN Architecture for Food Analysis Models.
+                        </figcaption>
+                    </figure>
+                    <br>
+                </div>
+            </div>
+            <!--/ Abstract. -->
+        </div>
+    </section>
+        
+    <hr>
+    
+
+   
+
+
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre>
+            @misc{BangkitSaviors,
+                  title={MySavior: A Lifeline for the Elderly}, 
+                  author={Moh Wildan Haikhal and},
+                  year={2024},
+                  eprint={},
+                  archivePrefix={arXiv},
+                  primaryClass={cs.CV},
+                  url={}, 
+            }
+            </pre>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div align="center" class="container">
+            <div class="columns is-centered">
+                <div class="content is-small">
+                    This website made by  <a
+                        href="https://github.com/BangkitSaviors" target="_blank">BangkitSaviors</a>.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+
+</html>
