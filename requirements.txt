@@ -1,0 +1,10 @@
+requests
+json
+os
+keras
+tensorflow
+cv2
+argparse
+numpy
+pandas
+sklearn
