@@ -2,8 +2,8 @@ import requests
 import json
 import os
 
-BASE_URL = 'http://app.nanonets.com/api/v2/MultiLabelClassification/'
-AUTH_KEY = os.environ.get('NANONETS_API_KEY')
+BASE_URL = 'https://app.nanonets.com/api/v2/MultiLabelClassification/'
+AUTH_KEY = '10707b22-aaf1-11ef-96dc-aa008b6b55e8'
 
 
 categories = [

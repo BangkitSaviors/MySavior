@@ -46,7 +46,7 @@ def load_data(df):
         item = df.loc[i][0]
         current_label = np.array((df.loc[i])[1:])
         
-        path = os.path.join('images', item)
+        path = os.path.join('./data/keras/images', item)
         list_of_imgs = [os.path.join(path, file) for file in os.listdir(path)]
         train_set = list_of_imgs[:30]
         val_set = list_of_imgs[30:40]
@@ -79,7 +79,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     print('Loading Data...')
-    df = pd.read_csv('clean_anno_reduced.csv')
+    df = pd.read_csv('./data/keras/clean_anno_reduced.csv')
     trainX, trainY, testX, testY, valX, valY = load_data(df)
     print('Data Loaded.')
 

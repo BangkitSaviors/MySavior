@@ -7,8 +7,8 @@ BASE_URL = 'http://app.nanonets.com/api/v2/MultiLabelClassification/'
 AUTH_KEY = os.environ.get('NANONETS_API_KEY')
 MODEL_ID = os.environ.get('NANONETS_MODEL_ID')
 
-image_folder_path = "./nanonets/multilabel_data/ImageSets/"
-annotations_folder = "./nanonets/multilabel_data/Annotations/"
+image_folder_path = "./data/nanonets/multilabel_data/ImageSets/"
+annotations_folder = "./data/nanonets/multilabel_data/Annotations/"
 
 def create_image_dictionary():
     image_label_dictionary = {}
