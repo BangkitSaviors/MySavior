@@ -1,9 +1,7 @@
 requests
-json
-os
 keras
 tensorflow
-cv2
+opencv-python
 argparse
 numpy
 pandas
