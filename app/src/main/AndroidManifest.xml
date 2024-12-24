@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo_mysavior"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo_apps"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MySavior"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.detail.DetailArticleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SplashScreen"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.BmiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.setting.SettingActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+
+        <activity
+            android:name=".ui.welcome.WelcomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MySavior" />
+        <activity
+            android:name=".ui.register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".ui.warning.shakebg.ShakeDetectionService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.warning.WarningActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"></activity>
+    </application>
+
+</manifest>

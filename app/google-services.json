@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "719689608006",
+    "project_id": "mysavior-5bd47",
+    "storage_bucket": "mysavior-5bd47.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:719689608006:android:34c29385ab5708cb8bd347",
+        "android_client_info": {
+          "package_name": "com.capstone.team.mysavior"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTKiaRFpgvifWPCjXDwYDzG5cGdLx8Et8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

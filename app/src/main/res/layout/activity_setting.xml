@@ -1,0 +1,67 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Foto Profil -->
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_person_black_24dp"
+            android:background="@drawable/circle_background" />
+
+        <Button
+            android:id="@+id/changeProfilePictureButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Profile Picture"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Nama -->
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <!-- Tanggal Lahir -->
+        <EditText
+            android:id="@+id/profile_birthdate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter Birthdate"
+            android:inputType="date"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/profile_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter Phone Number"
+            android:inputType="phone"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Changes"
+            android:textSize="16sp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+</ScrollView>
